@@ -1,0 +1,9 @@
+{
+  "name": "operate-override",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

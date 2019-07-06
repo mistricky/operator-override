@@ -1,2 +1,8 @@
 # dependencies
 node_modules
+
+# dist
+dist
+
+# log
+yarn-error.log

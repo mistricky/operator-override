@@ -2,6 +2,51 @@
 # yarn lockfile v1
 
 
+"@types/babel-core@^6.25.6":
+  version "6.25.6"
+  resolved "https://registry.npm.taobao.org/@types/babel-core/download/@types/babel-core-6.25.6.tgz#9e4faefcb300fd3abf0d2c2d85c505071462c1e1"
+  integrity sha1-nk+u/LMA/Tq/DSwthcUFBxRiweE=
+  dependencies:
+    "@types/babel-generator" "*"
+    "@types/babel-template" "*"
+    "@types/babel-traverse" "*"
+    "@types/babel-types" "*"
+    "@types/babylon" "*"
+
+"@types/babel-generator@*":
+  version "6.25.3"
+  resolved "https://registry.npm.taobao.org/@types/babel-generator/download/@types/babel-generator-6.25.3.tgz#8f06caa12d0595a0538560abe771966d77d29286"
+  integrity sha1-jwbKoS0FlaBThWCr53GWbXfSkoY=
+  dependencies:
+    "@types/babel-types" "*"
+
+"@types/babel-template@*":
+  version "6.25.2"
+  resolved "https://registry.npm.taobao.org/@types/babel-template/download/@types/babel-template-6.25.2.tgz#3c4cde02dbcbbf461a58d095a9f69f35eabd5f06"
+  integrity sha1-PEzeAtvLv0YaWNCVqfafNeq9XwY=
+  dependencies:
+    "@types/babel-types" "*"
+    "@types/babylon" "*"
+
+"@types/babel-traverse@*", "@types/babel-traverse@^6.25.5":
+  version "6.25.5"
+  resolved "https://registry.npm.taobao.org/@types/babel-traverse/download/@types/babel-traverse-6.25.5.tgz#6d293cf7523e48b524faa7b86dc3c488191484e5"
+  integrity sha1-bSk891I+SLUk+qe4bcPEiBkUhOU=
+  dependencies:
+    "@types/babel-types" "*"
+
+"@types/babel-types@*", "@types/babel-types@^7.0.7":
+  version "7.0.7"
+  resolved "https://registry.npm.taobao.org/@types/babel-types/download/@types/babel-types-7.0.7.tgz#667eb1640e8039436028055737d2b9986ee336e3"
+  integrity sha1-Zn6xZA6AOUNgKAVXN9K5mG7jNuM=
+
+"@types/babylon@*":
+  version "6.16.5"
+  resolved "https://registry.npm.taobao.org/@types/babylon/download/@types/babylon-6.16.5.tgz#1c5641db69eb8cdf378edd25b4be7754beeb48b4"
+  integrity sha1-HFZB22nrjN83jt0ltL53VL7rSLQ=
+  dependencies:
+    "@types/babel-types" "*"
+
 abbrev@1:
   version "1.1.1"
   resolved "http://119.23.73.70/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -121,10 +166,10 @@ babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-core@^6.26.0:
+babel-core@^6.26.0, babel-core@^6.26.3:
   version "6.26.3"
-  resolved "http://119.23.73.70/babel-core/-/babel-core-6.26.3.tgz#b2e2f09e342d0f0c88e2f02e067794125e75c207"
-  integrity sha512-6jyFLuDmeidKmUEb3NM+/yawG0M2bDZ9Z1qbZP59cyHLz8kYGKYwpJP0UwUKKUiTRNvxfLesJnTedqczP7cTDA==
+  resolved "https://registry.npm.taobao.org/babel-core/download/babel-core-6.26.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-core%2Fdownload%2Fbabel-core-6.26.3.tgz#b2e2f09e342d0f0c88e2f02e067794125e75c207"
+  integrity sha1-suLwnjQtDwyI4vAuBneUEl51wgc=
   dependencies:
     babel-code-frame "^6.26.0"
     babel-generator "^6.26.0"
@@ -218,7 +263,7 @@ babel-template@^6.24.1, babel-template@^6.26.0:
 
 babel-traverse@^6.26.0:
   version "6.26.0"
-  resolved "http://119.23.73.70/babel-traverse/-/babel-traverse-6.26.0.tgz#46a9cbd7edcc62c8e5c064e2d2d8d0f4035766ee"
+  resolved "https://registry.npm.taobao.org/babel-traverse/download/babel-traverse-6.26.0.tgz#46a9cbd7edcc62c8e5c064e2d2d8d0f4035766ee"
   integrity sha1-RqnL1+3MYsjlwGTi0tjQ9ANXZu4=
   dependencies:
     babel-code-frame "^6.26.0"
@@ -233,13 +278,18 @@ babel-traverse@^6.26.0:
 
 babel-types@^6.26.0:
   version "6.26.0"
-  resolved "http://119.23.73.70/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
+  resolved "https://registry.npm.taobao.org/babel-types/download/babel-types-6.26.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-types%2Fdownload%2Fbabel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
   integrity sha1-o7Bz+Uq0nrb6Vc1lInozQ4BjJJc=
   dependencies:
     babel-runtime "^6.26.0"
     esutils "^2.0.2"
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
+
+babel@^6.23.0:
+  version "6.23.0"
+  resolved "https://registry.npm.taobao.org/babel/download/babel-6.23.0.tgz#d0d1e7d803e974765beea3232d4e153c0efb90f4"
+  integrity sha1-0NHn2APpdHZb7qMjLU4VPA77kPQ=
 
 babylon@^6.18.0:
   version "6.18.0"
@@ -1640,6 +1690,11 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "http://119.23.73.70/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
+
+typescript@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.5.2.tgz#a09e1dc69bc9551cadf17dba10ee42cf55e5d56c"
+  integrity sha1-oJ4dxpvJVRyt8X26EO5Cz1Xl1Ww=
 
 union-value@^1.0.0:
   version "1.0.0"

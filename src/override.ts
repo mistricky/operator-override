@@ -1,9 +1,6 @@
 import {PluginObj, Visitor} from 'babel-core'
 import {
-    isCallExpression, 
     isIdentifier, 
-    isAssignmentExpression, 
-    sequenceExpression, 
     Decorator,
     classMethod,
     ClassMethod,
@@ -11,10 +8,15 @@ import {
     isBlockStatement, 
     isClassMethod,
     BlockStatement,
-    isLVal,
-    LVal
+    LVal,
+    Node,
+    callExpression,
+    functionExpression,
+    identifier,
 } from 'babel-types'
 import { Plugin } from './plugin';
+import { getProcessorLiteral } from './operators';
+import template from "@babel/template";
 
 // const SYSTEM_DECORATOR = "operator"
 const MULTIPLE_OPERATOR_ERROR_MESSAGE = "Don't use multiple operator decorators in one method"
@@ -64,6 +66,9 @@ function sysOperatorMethodsGenerator(
     return method
 }
 
+function isUndefinedNode(node: Node): boolean {
+    return isIdentifier(node) && node.name === "undefined"
+}
 
 export class OperatorOverride extends Plugin {
     public name: string = "operator-override";    
@@ -99,6 +104,33 @@ export class OperatorOverride extends Plugin {
                 }
             }
         },
+        BinaryExpression(path){
+            const {node} = path
+
+            if(!node.loc){
+                return 
+             }
+
+            const {left, right, operator} = node
+            const functionLiteral = getProcessorLiteral(operator);
+
+            if(isUndefinedNode(left) || isUndefinedNode(right)){
+                return
+            }
+
+            if(!functionLiteral){
+                return
+            }
+
+            const targetFunctionExpression =
+             functionExpression(
+                undefined,
+                [identifier("a"),
+                identifier("b")],
+                template.ast(functionLiteral) as unknown as BlockStatement)
+
+            path.replaceWith(callExpression(targetFunctionExpression, [left, right]))
+        }
     }
 
     dist(): PluginObj<{}> {

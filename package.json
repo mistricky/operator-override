@@ -1,8 +1,12 @@
 {
-  "name": "operate-override",
-  "version": "1.0.0",
+  "name": "babel-plugin-operator-override",
+  "version": "1.0.5",
   "main": "index.js",
   "license": "MIT",
+  "author": "younccat",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/babel-core": "^6.25.6",
     "@types/babel-traverse": "^6.25.5",
@@ -12,12 +16,12 @@
   "dependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
-    "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-syntax-decorators": "^7.2.0",
     "@babel/types": "^7.5.0",
     "@types/babel__core": "^7.1.2",
     "babel-core": "^6.26.3",
     "babel-types": "^6.26.0",
+    "bebel-plugin-operator-override": "1.0.4",
     "typescript": "^3.5.2"
   }
 }

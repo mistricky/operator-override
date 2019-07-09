@@ -13,8 +13,10 @@
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
     "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-syntax-decorators": "^7.2.0",
     "@babel/types": "^7.5.0",
     "@types/babel__core": "^7.1.2",
+    "babel-core": "^6.26.3",
     "babel-types": "^6.26.0",
     "typescript": "^3.5.2"
   }

@@ -5,7 +5,8 @@
         "module": "commonjs",
         "lib": ["dom", "es2015", "esnext"],
         "rootDir": "src",
-        "outDir": "dist"
+        "outDir": "dist",
+        "experimentalDecorators": true,
     },
     "include": [
         "src/**/*.ts"

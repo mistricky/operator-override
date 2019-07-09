@@ -6,6 +6,7 @@
         "lib": ["dom", "es2015", "esnext"],
         "rootDir": "src",
         "outDir": "dist",
+        "allowJs": true,
         "experimentalDecorators": true,
     },
     "include": [

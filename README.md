@@ -43,7 +43,7 @@ By the way, the `legacy` must be a `true`, because `operator-override` extends `
 `operator-override` use decorator to support operator override
 
 ```js
-const {Add, Sub} = require("../dist/decorators.js")
+const {Add, Sub} = require("babel-plugin-operator-override/dist/decorators")
 
 class Point {
 	constructor(x, y){

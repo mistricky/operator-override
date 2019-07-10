@@ -43,7 +43,7 @@ By the way, the `legacy` must be a `true`, because `operator-override` extends `
 `operator-override` use decorator to support operator override
 
 ```js
-const {Add, Sub} = require("babel-plugin-operator-override/dist/decorators")
+const {Add, Sub} = require("../dist/decorators.js")
 
 class Point {
 	constructor(x, y){
@@ -67,5 +67,30 @@ let point2 = new Point(2, 3)
 
 console.info(point1 + point2) // Point { x: 3, y: 5 }
 console.info(point1 - point2) // Point { x: -1, y: -1 }
+```
+
+Maybe you perfer this way to override operator, it's allowed
+
+```js
+class Point {
+	constructor(x, y){
+		this.x = x
+		this.y = y
+	}
+
+	$operatorAdd({x, y}){
+    	return new Point(this.x + x, this.y + y)
+	}
+	
+	$operatorSub({x, y}){
+		return new Point(this.x - x, this.y - y)
+	}
+}
+
+let point1 = new Point(1, 2)
+let point2 = new Point(2, 3)
+
+console.info(point1 + point2)
+console.info(point1 - point2)
 ```
 

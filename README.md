@@ -53,7 +53,7 @@ class Point {
 
 	@Add
   	addPoint({x, y}){
-    	return new Point(this.x + x, this.y + y)
+    		return new Point(this.x + x, this.y + y)
 	}
 	
 	@Sub
@@ -79,7 +79,7 @@ class Point {
 	}
 
 	$operatorAdd({x, y}){
-    	return new Point(this.x + x, this.y + y)
+    		return new Point(this.x + x, this.y + y)
 	}
 	
 	$operatorSub({x, y}){

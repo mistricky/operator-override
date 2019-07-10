@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev:run":"node out.js",
+    "dev:trans": "babel src.js -o out.js",
+    "start": "npm run dev:run && npm run dev:trans"
+  },
+  "dependencies": {
+    "babel-plugin-operator-override": "^1.0.7"
+  }
+}

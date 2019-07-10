@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-operator-override",
-  "version": "1.0.5",
-  "main": "index.js",
+  "version": "1.0.7",
+  "main": "dist/main.js",
   "license": "MIT",
   "author": "younccat",
   "files": [
@@ -21,7 +21,7 @@
     "@types/babel__core": "^7.1.2",
     "babel-core": "^6.26.3",
     "babel-types": "^6.26.0",
-    "bebel-plugin-operator-override": "1.0.4",
+    "bebel-plugin-operator-override": "^1.0.1",
     "typescript": "^3.5.2"
   }
 }

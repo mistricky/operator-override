@@ -31,7 +31,7 @@ By the way, the `legacy` must be a `true`, because `operator-override` extends `
 ```json
 {
   "plugins": [
-    ["babel-plugin-operator-override", {legacy: true}]
+    ["babel-plugin-operator-override", {"legacy": true}]
   ]
 }
 ```

@@ -1,3 +1,5 @@
+/// <reference path="./module.d.ts" />
+
 import { PluginObj, Visitor } from "babel-core";
 
 export abstract class Plugin implements PluginObj{

@@ -17,6 +17,7 @@ import {
 import { Plugin } from './plugin';
 import { getProcessorLiteral } from './operators';
 import template from "@babel/template";
+import syntaxDecorators from "@babel/plugin-syntax-decorators";
 
 // const SYSTEM_DECORATOR = "operator"
 const MULTIPLE_OPERATOR_ERROR_MESSAGE = "Don't use multiple operator decorators in one method"
@@ -71,7 +72,8 @@ function isUndefinedNode(node: Node): boolean {
 }
 
 export class OperatorOverride extends Plugin {
-    public name: string = "operator-override";    
+    public name: string = "operator-override";   
+    public inherits = syntaxDecorators 
 
     constructor(){
         super()
@@ -136,6 +138,7 @@ export class OperatorOverride extends Plugin {
     dist(): PluginObj<{}> {
         return {
             name:this.name,
+            inherits: this.inherits,
             visitor:this.visitor,
         }
     }

@@ -5,8 +5,8 @@
         "module": "commonjs",
         "lib": ["dom", "es2015", "esnext"],
         "rootDir": "src",
+        "declaration": true,
         "outDir": "dist",
-        "allowJs": true,
         "experimentalDecorators": true,
     },
     "include": [

@@ -3,6 +3,7 @@ node_modules
 
 # dist
 dist
+example/out.js
 
 # log
 yarn-error.log
